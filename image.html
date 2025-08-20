@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Responsive Image Gallery</h1>
+
+  <!-- Filter Buttons -->
+  <div class="filter-buttons">
+    <button onclick="filterImages('all')" class="active">All</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('city')">City</button>
+    <button onclick="filterImages('animals')">Animals</button>
+  </div>
+
+  <!-- Gallery -->
+  <div class="gallery">
+    <img src="images/nature1.jpg" alt="Nature" data-category="nature">
+    <img src="images/city1.jpg" alt="City" data-category="city">
+    <img src="images/animal1.jpg" alt="Animals" data-category="animals">
+    <img src="images/nature2.jpg" alt="Nature" data-category="nature">
+    <img src="images/city2.jpg" alt="City" data-category="city">
+    <img src="images/animal2.jpg" alt="Animals" data-category="animals">
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" src="" alt="">
+    <a class="prev" onclick="prevImage()">&#10094;</a>
+    <a class="next" onclick="nextImage()">&#10095;</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
